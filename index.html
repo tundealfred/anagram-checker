@@ -3,10 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Anagram Checker!</title>
   </head>
   <body>
-    <h1>Anagram Checker</h1>
-    <p>Check if the word match the anagram</p>
+    <div class="game-container">
+      <h1>Anagram Checker</h1>
+      <div class="words" id="wordPair">Loading...</div>
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+      <div class="result" id="result"></div>
+      <div class="timer">Time left: <span id="timeLeft">10</span> Seconds</div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="level">Level: <span id="level">1</span></div>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>
