@@ -121,6 +121,11 @@ function getRandomPairs() {
 }
 
 function newRound() {
+  if (level > 10) {
+    endGame();
+    return;
+  }
+
   currentPair = getRandomPairs();
   document.getElementById(
     "wordPair"
@@ -128,6 +133,15 @@ function newRound() {
   document.getElementById("result").innerText = "";
   document.getElementById("level").innerText = level;
   startTimer();
+}
+
+function endGame() {
+  clearInterval(timerInterval);
+  document.getElementById("wordPair").style.display = "none";
+  document.getElementById("yesBtn").style.display = "none";
+  document.getElementById("noBtn").style.display = "none";
+  document.getElementById("gameOver").style.display = "block";
+  document.getElementById("restartBtn").style.display = "block";
 }
 
 function startTimer() {
@@ -176,6 +190,10 @@ document.getElementById("yesBtn").addEventListener("click", () => {
 
 document.getElementById("noBtn").addEventListener("click", () => {
   handleChoice(false);
+});
+
+document.getElementById("restartBtn").addEventListener("click", () => {
+  location.reload();
 });
 
 newRound();

@@ -22,6 +22,7 @@ button {
 .timer {
   font-size: 22px;
   color: red;
+  margin: 20px;
 }
 .score {
   font-size: 22px;
@@ -31,4 +32,17 @@ button {
 .level {
   font-size: 20px;
   margin-top: 10px;
+}
+
+.game-over {
+  font-size: 24px;
+  color: blue;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.restart-btn {
+  text-align: center;
+  display: block;
+  margin: auto;
 }
